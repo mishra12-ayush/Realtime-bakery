@@ -12,7 +12,6 @@ ul {
     flex-direction: row;
     align-content: space-around;
     background-color: white;
-    box-shadow: 10px 10px 5px black;
   }
   li a {
     text-decoration : none;
@@ -70,4 +69,48 @@ ul {
   .option:hover {
       background-color: $light-grey;
       border-radius: 6px;
+  }
+  .ordernow{
+      background-color: $primary;
+      border-radius: 20px; border: $primary 2px solid;
+      color: white;
+      font-weight: bold;
+      width: 150px;
+      height: 40px;
+      margin: 20px;
+  }
+  .ordernow:hover {
+      background-color: $primary-hover; border: $primary-hover 2px solid;
+      transition : $smooth;
+  }
+  section.cart{
+      .amt{
+          color: $primary-hover;
+          font-weight: bolder;
+          min-height: 100vh;
+      }
+  }
+  section.login , section.register{
+      background-color: $light-grey;
+      min-height: 86vh;
+      form {
+          width: 450px;
+          padding: 20px;
+          background-color: white; border-radius: 15px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          position: relative;
+          box-shadow: 10px 10px 20px #cccccc;
+          top: 150px;
+          left: 35%;
+      }
+      form a{
+          color: $primary;
+          text-decoration: none;
+      }
+      form a:hover {
+          color: $primary-hover;
+          text-decoration: none ;
+      }
   }

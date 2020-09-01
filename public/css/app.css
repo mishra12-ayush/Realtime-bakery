@@ -12,7 +12,6 @@ ul {
   flex-direction: row;
   align-content: space-around;
   background-color: white;
-  box-shadow: 10px 10px 5px black;
 }
 
 li a {
@@ -44,7 +43,7 @@ li:last-child a {
 }
 
 li:last-child a :hover {
-  background-color: #5202a8;
+  background-color: #583d75;
   padding: 10px;
   padding-left: 25px;
   border-radius: 40%;
@@ -85,5 +84,61 @@ li:last-child a :hover {
 .option:hover {
   background-color: #e6e6e6;
   border-radius: 6px;
+}
+
+.ordernow {
+  background-color: #744e9c;
+  border-radius: 20px;
+  border: #744e9c 2px solid;
+  color: white;
+  font-weight: bold;
+  width: 150px;
+  height: 40px;
+  margin: 20px;
+}
+
+.ordernow:hover {
+  background-color: #583d75;
+  border: #583d75 2px solid;
+  transition: all 0.3s ease-in-out;
+}
+
+section.cart .amt {
+  color: #583d75;
+  font-weight: bolder;
+  min-height: 100vh;
+}
+
+section.login,
+section.register {
+  background-color: #e6e6e6;
+  min-height: 86vh;
+}
+
+section.login form,
+section.register form {
+  width: 450px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  box-shadow: 10px 10px 20px #cccccc;
+  top: 150px;
+  left: 35%;
+}
+
+section.login form a,
+section.register form a {
+  color: #744e9c;
+  text-decoration: none;
+}
+
+section.login form a:hover,
+section.register form a:hover {
+  color: #583d75;
+  text-decoration: none;
 }
 
