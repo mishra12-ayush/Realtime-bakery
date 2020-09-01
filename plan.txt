@@ -12,3 +12,11 @@
 7) create orders view with table for customer and admin
 8) create orders single page with status
 9) create login page with route
+10) create register page with route
+11) build register crud
+    -dependencies express-flash express-session cookie-parser datenv
+    -status code article
+    -database connection. dependencies mongoose
+12) build login using passport
+    -install dependencies passport passport-local express-session
+13) create menu model and put dummy data

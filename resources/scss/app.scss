@@ -1,0 +1,73 @@
+@import './variables';
+
+ul li {
+    display: inline;
+    padding: 10px;
+  }
+ul {
+    padding-top: 25px;
+}
+  .flex-container {
+    display: flex;
+    flex-direction: row;
+    align-content: space-around;
+    background-color: white;
+    box-shadow: 10px 10px 5px black;
+  }
+  li a {
+    text-decoration : none;
+    color: $primary;
+    font-weight: bold;
+    transition: $smooth;
+    border: #744e9c 2px solid;
+    border-radius: 10px;
+    padding: 6px;
+  }
+  li a:hover {
+    text-decoration : none;
+    color: white;
+    background-color: $primary;
+  }
+  .nav-menu {
+    margin-left: auto;
+  }
+  li:last-child a {
+    background-color: #744e9c; padding: 10px;padding-left: 25px; border-radius: 15px; border: none!important;
+  }
+  li:last-child a :hover {
+      background-color: $primary-hover;
+      padding: 10px;padding-left: 25px; border-radius: 40%;
+  }
+
+  .hero{
+      background-color: $light-grey;
+      display: flex;
+      flex-direction: row;
+      align-content: space-around;
+  }
+  .hero div{
+      padding: 40px;
+
+  }
+  .option{
+      width: 250px;
+      padding: 10px;
+      margin-right: 20px ;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+  .option button {
+      width: 100px;
+      border: $primary 2px solid;
+      border-radius: 15px;
+  }
+  .options{
+    padding: 40px;
+    display: flex;
+    flex-flow: row wrap;
+  }
+  .option:hover {
+      background-color: $light-grey;
+      border-radius: 6px;
+  }
