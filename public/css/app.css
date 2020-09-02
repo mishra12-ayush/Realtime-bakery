@@ -50,7 +50,7 @@ li:last-child a :hover {
 }
 
 .hero {
-  background-color: #e6e6e6;
+  background-image: linear-gradient(to right, #e6e6e6, #8a8a8a);
   display: flex;
   flex-direction: row;
   align-content: space-around;

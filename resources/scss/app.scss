@@ -39,7 +39,7 @@ ul {
   }
 
   .hero{
-      background-color: $light-grey;
+      background-image: linear-gradient( to right , $light-grey, #8a8a8a );;
       display: flex;
       flex-direction: row;
       align-content: space-around;
