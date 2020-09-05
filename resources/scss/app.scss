@@ -1,4 +1,7 @@
 @import './variables';
+@import '~noty/src/noty.scss';
+@import '~noty/src/themes/mint.scss';
+
 
 ul li {
     display: inline;
@@ -31,11 +34,11 @@ ul {
     margin-left: auto;
   }
   li:last-child a {
-    background-color: #744e9c; padding: 10px;padding-left: 25px; border-radius: 15px; border: none!important;
+    background-color: $primary; padding: 10px;padding-left: 20px; border-radius: 15px; border: none!important;
   }
-  li:last-child a :hover {
+  li:last-child a:hover {
       background-color: $primary-hover;
-      padding: 10px;padding-left: 25px; border-radius: 40%;
+     
   }
 
   .hero{
@@ -114,4 +117,10 @@ ul {
           color: $primary-hover;
           text-decoration: none ;
       }
+  }
+
+  .noty_theme__mint {
+      border-radius: 50px!important;
+      padding-left: 8px!important;
+      background-color: $primary-hover;
   }

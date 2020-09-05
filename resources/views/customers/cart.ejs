@@ -1,45 +1,29 @@
 
 <section class="cart" style="background-color: #e6e6e6; ">
+    <% if(session.cart) { %>
     <div style="width: 1200px; padding-left:400px ; ">
         <div style="display: flex; flex-direction: row;  border-bottom: gray 1px solid; padding: 10px;padding-top: 30px ;">
             <img src="/img/cart-black.png" alt="">
             <h2>&nbsp; &nbsp;Order Summary</h2>
         </div>
 
-        
+        <% for(let burger of Object.values(session.cart.items)) { %>
         <div class="order-list" style="display: flex; flex-direction: row; flex-align: center; padding: 10px;">
-            <img style="width: 60px;height: 60px;" src="/img/cherry-bomb.png" alt="">
+            <img style="width: 60px;height: 60px;" src="/img/<%= burger.item.image %>" alt="">
             <div style="padding: 10px;padding-left: 15px ; padding-right: 15px ;">
-            <h5>cherry-bomb</h5>
-            <span>medium</span>
+            <h5><%= burger.item.name %></h5>
+            <span><%= burger.item.size %></span>
             </div>
-            <span style="flex-grow: 1;">1 Pcs</span>
-            <span style="flex-grow: 1; font-weight: bold;">₹250</span>
+            <span style="flex-grow: 1;"><%= burger.qty %> Pcs</span>
+            <span style="flex-grow: 1; font-weight: bold;">₹<%= burger.item.price * burger.qty %></span>
         </div>
-        <div class="order-list" style="display: flex; flex-direction: row; flex-align: center; padding: 10px;">
-            <img style="width: 60px;height: 60px;" src="/img/cherry-bomb.png" alt="">
-            <div style="padding: 10px;padding-left: 15px ; padding-right: 15px ;">
-            <h5>cherry-bomb</h5>
-            <span>medium</span>
-            </div>
-            <span style="flex-grow: 1;">1 Pcs</span>
-            <span style="flex-grow: 1; font-weight: bold;">₹250</span>
-        </div>
-        <div class="order-list" style="display: flex; flex-direction: row; flex-align: center; padding: 10px;">
-            <img style="width: 60px;height: 60px;" src="/img/cherry-bomb.png" alt="">
-            <div style="padding: 10px;padding-left: 15px ; padding-right: 15px ;">
-            <h5>cherry-bomb</h5>
-            <span>medium</span>
-            </div>
-            <span style="flex-grow: 1;">1 Pcs</span>
-            <span style="flex-grow: 1; font-weight: bold;">₹250</span>
-        </div>
+        <% } %>
         <hr>
 
         <div style="text-align: right;">
             <div>
                 <span><b>Total Amount :</b></span>
-                <span class="amt">₹750</span>
+                <span class="amt">₹ <%= session.cart.totalPrice %></span>
             </div>
             <div>
                 <form action="">
@@ -51,11 +35,16 @@
             <!-- <a href="" style="width: 170px; padding: 5px; margin: 20px; text-decoration: none;" class="ordernow">Login to continue</a> -->
         </div>
     </div>
+
+
+    <% } else { %>
+
+    <div style="background-color: #e6e6e6; text-align: center;">
+        <h2 style="padding: 20px; font-family: Verdana, Geneva, Tahoma, sans-serif; font-weight: bold;">Cart Empty !😕</h2>
+        <p style="color: gray;padding-top: 20px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">You probably haven't added anything to the Cart yet. <br> To order , go to the Main page .</p>
+        <img style="width: 500px; padding: 20px;" src="/img/empty-cart.png" alt=""><br><br>
+        <a style="width: 250px; padding: 15px; margin: 20px; text-decoration: none;" class="ordernow" href="">Go Back</a><br><br>
+    </div>
+    <% } %>
 </section>
 
-<!-- <div style="background-color: #e6e6e6; text-align: center;">
-    <h2 style="padding: 20px; font-family: Verdana, Geneva, Tahoma, sans-serif; font-weight: bold;">Cart Empty !😕</h2>
-    <p style="color: gray;padding-top: 20px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">You probably haven't added anything to the Cart yet. <br> To order , go to the Main page .</p>
-    <img style="width: 500px; padding: 20px;" src="/img/empty-cart.png" alt=""><br><br>
-    <a style="width: 250px; padding: 15px; margin: 20px; text-decoration: none;" class="ordernow" href="">Go Back</a><br><br>
-</div> -->

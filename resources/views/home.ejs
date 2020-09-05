@@ -23,13 +23,13 @@
        
 
             <div class="option">
-                <div><img style="width: 170px;" src="/img/<%= burger.image %>" alt=""></div>
+                <div><img style="width: 170px;height: 150px;" src="/img/<%= burger.image %>" alt=""></div>
                 <div>
                     <h3 style="padding: 5px;"><%= burger.name %></h3>
                     <span style=" background-color: #e6e6e6; padding: 3px;padding-bottom: 3px; border-radius: 9px;margin-left: 30%; font-size: small;"><%= burger.size %></span><br>
                     <div style="display: flex;  flex-direction: row;padding-top: 10px; margin-top: 8px;">
                     <span><b>₹<%= burger.price %></b></span>
-                    <button style="display: flex; justify-content: space-between; margin-left: 30px;">
+                    <button data-burger="<%= JSON.stringify(burger) %>" class="add-to-cart" style="display: flex; justify-content: space-between; margin-left: 30px;">
                         <span>+</span>
                         <span>ADD</span>
                     </button>
