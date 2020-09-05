@@ -335,6 +335,12 @@ li a:hover {
   background-color: #744e9c;
 }
 
+#logout {
+  position: absolute;
+  right: 300px;
+  top: 25px;
+}
+
 .nav-menu {
   margin-left: auto;
 }
