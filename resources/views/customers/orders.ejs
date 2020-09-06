@@ -1,0 +1,33 @@
+<section class="container"  style="min-height: 600px;">
+        <h3>All Orders</h3><br>
+        <table class="table">
+            <thead class="thead-light">
+            <tr>
+                
+                <th scope="col">OrderID</th>
+                <th scope="col">Address</th>
+                <th scope="col">Time</th>
+            </tr>
+            </thead>
+            <tbody >
+                <% if(orders.length) { %>
+                    <% orders.forEach((order) => { %>
+                        <tr>
+                
+                            <td><a class="link" href="/"><%= order._id %></a></td>
+                            <td><%= order.address %></td>
+                            <td><%= order.createdAt %></td>
+                        </tr>
+
+                  <%  }) %>
+            
+            <% } else { %>
+                <tr>
+                    No orders Found 
+                </tr>
+                <br><br><br><br><br><br><br>
+            <% } %>
+            
+            </tbody>
+        </table>
+</section>

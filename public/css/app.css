@@ -319,7 +319,7 @@ ul {
   background-color: white;
 }
 
-li a {
+.flex-container li a {
   text-decoration: none;
   color: #744e9c;
   font-weight: bold;
@@ -329,7 +329,7 @@ li a {
   padding: 6px;
 }
 
-li a:hover {
+.flex-container li a:hover {
   text-decoration: none;
   color: white;
   background-color: #744e9c;
@@ -337,7 +337,7 @@ li a:hover {
 
 #logout {
   position: absolute;
-  right: 300px;
+  right: 370px;
   top: 25px;
 }
 
@@ -345,7 +345,7 @@ li a:hover {
   margin-left: auto;
 }
 
-li:last-child a {
+.flex-container li:last-child a {
   background-color: #744e9c;
   padding: 10px;
   padding-left: 20px;
@@ -353,7 +353,7 @@ li:last-child a {
   border: none !important;
 }
 
-li:last-child a:hover {
+.flex-container li:last-child a:hover {
   background-color: #583d75;
 }
 
@@ -455,5 +455,37 @@ section.register form a:hover {
   border-radius: 50px !important;
   padding-left: 8px !important;
   background-color: #583d75;
+}
+
+.link {
+  color: #744e9c;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: #583d75;
+  text-decoration: none;
+}
+
+.footer {
+  background-color: #330b38;
+  color: white;
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: white;
+}
+
+.footer ul li {
+  display: list-item;
+}
+
+.footer ul {
+  list-style-type: none;
 }
 

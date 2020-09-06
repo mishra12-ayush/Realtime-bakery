@@ -16,7 +16,7 @@ ul {
     align-content: space-around;
     background-color: white;
   }
-  li a {
+  .flex-container li a {
     text-decoration : none;
     color: $primary;
     font-weight: bold;
@@ -25,23 +25,23 @@ ul {
     border-radius: 10px;
     padding: 6px;
   }
-  li a:hover {
+  .flex-container li a:hover {
     text-decoration : none;
     color: white;
     background-color: $primary;
   }
   #logout{
       position: absolute;
-      right: 300px;
+      right: 370px;
       top: 25px;
   }
   .nav-menu {
     margin-left: auto;
   }
-  li:last-child a {
+  .flex-container li:last-child a {
     background-color: $primary; padding: 10px;padding-left: 20px; border-radius: 15px; border: none!important;
   }
-  li:last-child a:hover {
+  .flex-container li:last-child a:hover {
       background-color: $primary-hover;
      
   }
@@ -129,3 +129,29 @@ ul {
       padding-left: 8px!important;
       background-color: $primary-hover;
   }
+  .link{
+    color: $primary;
+    text-decoration: none;
+}
+.link:hover {
+    color: $primary-hover;
+    text-decoration: none ;
+}
+.footer{
+    background-color: #330b38;
+    color: white;
+    a {
+        color: white;
+        text-decoration : none;
+    }
+    a:hover {
+        color: white;
+    } 
+    
+}
+.footer ul li {
+    display: list-item;
+}
+.footer ul {
+    list-style-type:none;
+}

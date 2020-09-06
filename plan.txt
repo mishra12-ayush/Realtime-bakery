@@ -31,3 +31,14 @@ npm run dev , npm run watch
 15) build login using passport
     -install dependencies passport passport-local express-session
 16) create menu model and put dummy data
+17) Create order controller and link it in server.js
+18) create order view with table  for customer and admin
+19) Create orders single page with status 
+20) place order functionality
+21) Show all orders on customer order page
+22) order tracker
+    - dependencies - moment
+23) socket connection
+    - dependencies - socket.io
+24) Bui;d project for deployment
+25) deploy project on live server

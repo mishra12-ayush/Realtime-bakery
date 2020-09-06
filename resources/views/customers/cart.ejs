@@ -25,14 +25,19 @@
                 <span><b>Total Amount :</b></span>
                 <span class="amt">₹ <%= session.cart.totalPrice %></span>
             </div>
+            <% if(user) { %>
             <div>
-                <form action="">
-                    <input style="margin: 5px; width: 250px; margin-top: 40px;" type="text" placeholder="Phone Number"><br>
-                    <input style="margin: 5px; width: 250px;" type="text" placeholder="Address"><br><br>
+                <form action="/orders" method="POST">
+                    <input name="phone" style="margin: 5px; width: 250px; margin-top: 40px;" type="text" placeholder="Phone Number"><br>
+                    <input name="address" style="margin: 5px; width: 250px;" type="text" placeholder="Address"><br><br>
                     <button type="submit" class="ordernow">Order Now</button>
                 </form>
             </div>
-            <!-- <a href="" style="width: 170px; padding: 5px; margin: 20px; text-decoration: none;" class="ordernow">Login to continue</a> -->
+            <% } else { %>
+                <br><br><br>
+            <a href="/login" style="width: 170px; padding: 5px; margin-top: 60px; text-decoration: none;" class="ordernow">Login to continue</a>
+                <br><br><br>
+            <% } %>
         </div>
     </div>
 

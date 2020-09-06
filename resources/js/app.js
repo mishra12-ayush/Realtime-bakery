@@ -1,8 +1,10 @@
 import axios from 'axios'
 import Noty from 'noty'
+import { initAdmin } from './admin'
 
 let addToCart = document.querySelectorAll('.add-to-cart');
 let cartCounter = document.querySelector('#cartCounter')
+
 
 function updateCart(burger){
     axios.post('/update-cart', burger).then(res => {
@@ -31,3 +33,6 @@ addToCart.forEach((btn) => {
         console.log(burger)
     })
 })
+
+initAdmin()
+

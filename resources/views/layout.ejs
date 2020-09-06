@@ -2,26 +2,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Realtime Order app</title>
+    <title>Order app</title>
     <link rel="icon" type="image/png" href="/img/favicon.ico">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/app.css">
+
 </head>
 <body>
     <nav class="flex-container">
         <div>
-            <a href=""><img style="width: 140px; height: 90px;" src="/img/logo.jpg" alt="logo"></a>
+            <a href="/"><img style="width: 140px; height: 90px;" src="/img/logo.jpg" alt="logo"></a>
         </div>
         <div class="nav-menu">
             <ul>
-                <li><a href="#">Menu</a></li>
-                <li><a href="#">Offers</a></li>
+                
+                <li><a href="/">Menu</a></li>
+                
                 <% if(user) { %>
                 <li>
                     <form id="logout" action="/logout" method="POST">
                         <a onclick="document.getElementById('logout').submit()" href="#">Logout</a>
                     </form>
                 </li>
+                <% if(user.role =='admin') { %>
+                    <li>
+                            <a  href="/admin/orders">Customer Orders</a>
+                    </li>
+                <% } else { %>
+                    <li><a href="/customer/orders">Order History</a></li>
+                <% } %>
                 <% } else { %>
                 <li><a href="/login">Login</a></li>
                 <li><a href="/register">Register</a></li>
@@ -34,6 +43,43 @@
 
     
 <%- body %>
+
+    <footer class="footer">
+        <div style="display: flex; flex-direction: row; justify-content: space-around;padding-top: 25px;padding-bottom: 25px;">
+            <div>
+                <h5>Locations</h5>
+                <ul>
+                    <li>Noida</li>
+                    <li>Ghaziabad</li>
+                    <li>Delhi</li>
+                    <li>Lucknow</li>
+                    <li>Gurgaon</li>
+                </ul>
+            </div>
+            <div>
+                <h5>Quick Links</h5>
+                <ul>
+                    <li><a href="/">Menu</a></li>
+                    <li><a href="/customer/orders">Order History</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Press Release</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5>Get in touch with us</h5>
+                <address style="font-size: 80%; font-style: inherit;">
+                    Showroom No. 9, Scindia House,<br>Atma Ram Mension, Outer Circle,<br> Connaught Place <br>
+                    Phone no. : +890 154 5998<br>
+                    
+                    Mail us :
+                    <a href="mailto:confusion@food.net">email@motleyburgers.com</a>
+                </address>
+            </div>
+        </div>
+        <hr style="color: white; padding-left: 20px;">
+        <div style="padding-bottom: 25px;text-align: center;font-size: small;">© Copyright 2020. Motley Burgers. All Rights Reserved.</div>
+
+    </footer>
     <script src="js/app.js"></script>
 </body>
 </html>
